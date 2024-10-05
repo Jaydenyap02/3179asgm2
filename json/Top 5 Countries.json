@@ -3,7 +3,7 @@
     "title": {"text": "The 5 Countries with the Largest Unemployment Rate Increase from 1991 to 2021", "fontSize": 16, "fontWeight": "bold"},
     "background": "whitesmoke",
     "width": "container",
-    "height": "container",
+    "height": "500",
 
     "data": {
         "url": "https://raw.githubusercontent.com/Jaydenyap02/3179asgm2/refs/heads/main/data/unemployment%20analysis.csv"
