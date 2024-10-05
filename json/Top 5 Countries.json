@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text": "The 5 Countries with the Largest Unemployment Rate Increase from 1991 to 2021", "fontSize": 16, "fontWeight": "bold"},
     "background": "whitesmoke",
-    "width": 800,
+    "width": "container",
     "height": 500,
 
     "data": {
