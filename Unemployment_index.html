@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Unemployment Rate</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4; /* Website background color */
+        }
+        .header {
+            background-color: #4A4A4A; /* Dark grey background */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .subheader {
+            background-color: #4A4A4A; /* Dark grey background for subtitle */
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            margin: 0; /* Remove default margins */
+        }
+        .description {
+            margin: 0; /* Remove centering and margin limits */
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .chart-container {
+            display: block; /* Stack elements */
+            width: 100%;
+        }
+        .chart {
+            width: 80%; /* Set the chart width */
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .chart-left {
+            margin-left: 0; /* Align the chart to the left */
+        }
+        .flex-container {
+            display: flex; /* Use flexbox for layout */
+            align-items: flex-start; /* Align items at the top */
+            margin: 20px 0; /* Space around the flex container */
+        }
+        .explanation {
+            width: 40%; /* Set the width for the explanation text */
+            margin-left: 20px; /* Space between the graph and text */
+            margin-top: 20px; /* Align text with the graph */
+        }
+        .explanation-2 {
+            width: 80%; /* Set the width for the second explanation text (same as the chart width) */
+            margin: 0; /* Reset margin to avoid extra space */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Global Unemployment Rate</h1>
+    </div>
+    
+    <div class="subheader">
+        <h2>What is Unemployment Rate?</h2>
+    </div>
+
+    <div class="description">
+        <p>
+            The unemployment rate is a key indicator of economic health. It represents the percentage of the labor force that is unemployed and actively seeking work. It provides insight into the economic challenges faced by a country and the ability of its labor market to absorb new and existing workers.
+        </p>
+        <p>
+            The goal of this visualization is to explore how unemployment rates have evolved globally between 1990 and 2021, highlighting countries with significant changes in unemployment, the average unemployment rates across different regions, and the relationship between human development and unemployment rates.
+        </p>
+    </div>
+
+    <div class="chart-container">
+        <!-- First Visualization with explanation -->
+        <div class="flex-container">
+            <div class="chart chart-left">
+                <h2>Unemployment Rate Around the World</h2>
+                <div id="vis1"></div>
+            </div>
+
+            <div class="explanation">
+                <h2>How has unemployment changed globally?</h2>
+                <p>
+                    Over time, unemployment rates have fluctuated across the globe due to various economic, political, and social factors. In many developed nations, unemployment rates remained relatively low and stable throughout the 1990s and early 2000s. However, events such as the 2008 global financial crisis led to a sharp rise in unemployment worldwide, with a slow recovery in many regions.
+                </p>
+                <p>
+                    The COVID-19 pandemic in 2020 triggered another significant spike in unemployment rates as lockdowns and restrictions led to widespread job losses, especially in industries like tourism, retail, and manufacturing.
+                </p>
+            </div>
+        </div>
+
+        <!-- Second Visualization with explanation -->
+        <div class="flex-container">
+            <div class="explanation-2">
+                <h2>Analysis of Top 5 Countries</h2>
+                <p>
+                    This graph highlights the five countries with the largest increases in unemployment rates from 1991 to 2021. Armenia saw the greatest rise, with unemployment growing from 0% to 19.3%. West Bank and Gaza followed, reaching 13.3%. Costa Rica, Botswana, and Panama also experienced notable increases, with Panama showing the slowest growth, rising from 8.4% to 10.9%.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="chart chart-left">
+                <h2>Top 5 Countries by Unemployment Rate</h2>
+                <div id="vis2"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Embed the first visualization
+        vegaEmbed('#vis1', 'https://raw.githubusercontent.com/Jaydenyap02/3179asgm2/refs/heads/main/json/unemployment_rate_around_world.json')
+            .then(result => console.log(result))
+            .catch(console.error);
+
+        // Embed the second visualization
+        vegaEmbed('#vis2', 'https://raw.githubusercontent.com/Jaydenyap02/3179asgm2/refs/heads/main/json/Top%205%20Countries.json')
+            .then(result => console.log(result))
+            .catch(console.error);
+    </script>
+</body>
+</html>
+
+
+
